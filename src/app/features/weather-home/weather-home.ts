@@ -6,11 +6,13 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WeatherCard } from '../weather-card/weather-card';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-weather-home',
-  imports: [FormsModule, FontAwesomeModule, WeatherCard],
+  imports: [FormsModule, FontAwesomeModule, WeatherCard, CommonModule],
   templateUrl: './weather-home.html',
+  standalone: true,
 })
 export class WeatherHome implements OnInit, OnDestroy {
   private readonly weatherService = inject(WeatherService);

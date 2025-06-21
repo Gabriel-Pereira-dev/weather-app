@@ -1,0 +1,27 @@
+<div class="search">
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      placeholder="Buscar tempo por localização"
+      name="city"
+      [(ngModel)]="initialCityName"
+      [disabled]="!initialCityName"
+    />
+    <span
+      (click)="onSubmit()"
+      (keydown.enter)="onSubmit()"
+      (keydown.space)="onSubmit()"
+      tabindex="0"
+      style="cursor: pointer"
+    >
+      <fa-icon
+        animation="fade"
+        style="--fa-animation-duration: 0.5s"
+        class="search-icon"
+        [icon]="searchIcon"
+      ></fa-icon>
+    </span>
+  </form>
+</div>
+
+<app-weather-card></app-weather-card>

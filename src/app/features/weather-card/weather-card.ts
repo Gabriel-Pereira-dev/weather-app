@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { IWeatherData } from '../../models/interfaces/IWeatherData';
 import {
@@ -10,7 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-weather-card',
-  imports: [FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './weather-card.html',
   standalone: true,
 })
